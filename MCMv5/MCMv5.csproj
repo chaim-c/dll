@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
+    <ProjectGuid>{748945BB-5409-4F01-BB4F-A81AD7E7EE15}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MCMv5</RootNamespace>
+    <AssemblyName>MCMv5</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETStandard</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x64' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+  </PropertyGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bannerlord\BUTR\Shared\Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Helpers\ApplicationVersionHelper.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Helpers\ModuleInfoExtendedWithMetadata.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Helpers\ModuleInfoHelper.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Utils\MBSubModuleBaseSimpleWrapper.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Utils\WrappedConstructorInfo.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Utils\WrappedMethodInfo.cs" />
+    <Compile Include="Bannerlord\BUTR\Shared\Utils\WrappedPropertyInfo.cs" />
+    <Compile Include="Bannerlord\ModuleManager\AlphanumComparatorFast.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ApplicationVersion.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ApplicationVersionComparer.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ApplicationVersionRange.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ApplicationVersionType.cs" />
+    <Compile Include="Bannerlord\ModuleManager\CollectionsExtensions.cs" />
+    <Compile Include="Bannerlord\ModuleManager\DependentModule.cs" />
+    <Compile Include="Bannerlord\ModuleManager\DependentModuleMetadata.cs" />
+    <Compile Include="Bannerlord\ModuleManager\LoadType.cs" />
+    <Compile Include="Bannerlord\ModuleManager\LoadTypeParse.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleInfoExtended.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleInfoExtendedExtensions.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleIssue.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleIssueType.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleSorter.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleSorterOptions.cs" />
+    <Compile Include="Bannerlord\ModuleManager\ModuleUtilities.cs" />
+    <Compile Include="Bannerlord\ModuleManager\SubModuleInfoExtended.cs" />
+    <Compile Include="Bannerlord\ModuleManager\SubModuleTags.cs" />
+    <Compile Include="BUTR\DependencyInjection\Extensions\ServiceCollectionExtensions.cs" />
+    <Compile Include="BUTR\DependencyInjection\GenericServiceProvider.cs" />
+    <Compile Include="BUTR\DependencyInjection\IGenericServiceContainer.cs" />
+    <Compile Include="BUTR\DependencyInjection\IGenericServiceFactory.cs" />
+    <Compile Include="BUTR\DependencyInjection\IGenericServiceProvider.cs" />
+    <Compile Include="BUTR\DependencyInjection\IGenericServiceProviderScope.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\DefaultBUTRLogger.2.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\DefaultBUTRLogger.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\IBUTRLogger.2.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\IBUTRLogger.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\LoggerExtensions.cs" />
+    <Compile Include="BUTR\DependencyInjection\Logger\LogLevel.cs" />
+    <Compile Include="BUTR\DependencyInjection\WithHistoryGenericServiceContainer.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\AccessCacheHandle.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\AccessTools2.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\HarmonyExtensions.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\SymbolExtensions2.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\Traverse2.2.cs" />
+    <Compile Include="HarmonyLib\BUTR\Extensions\Traverse2.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\BaseSettingPropertyAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\SettingPropertyGroupAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v1\SettingPropertyAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyBoolAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyButtonAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyDropdownAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyFloatingIntegerAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyIntegerAttribute.cs" />
+    <Compile Include="MCM\Abstractions\Attributes\v2\SettingPropertyTextAttribute.cs" />
+    <Compile Include="MCM\Abstractions\BaseSettingsExtensions.cs" />
+    <Compile Include="MCM\Abstractions\BaseSettingsProvider.cs" />
+    <Compile Include="MCM\Abstractions\Base\BaseSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\AttributeGlobalSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\BaseFluentGlobalSettingsWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\BaseGlobalSettingsWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\EmptyGlobalSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\ExternalGlobalSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\FluentGlobalSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\GlobalSettings.2.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\GlobalSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\Global\SettingsWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Base\IFluentSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\AttributePerCampaignSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\BasePerCampaignSettingsWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\EmptyPerCampaignSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\ExternalPerCampaignSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\FluentPerCampaignSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\PerCampaignSettings.2.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerCampaign\PerCampaignSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\AttributePerSaveSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\BasePerSaveSettingsWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\EmptyPerSaveSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\ExternalPerSaveSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\FluentPerSaveSettings.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\PerSaveSettings.2.cs" />
+    <Compile Include="MCM\Abstractions\Base\PerSave\PerSaveSettings.cs" />
+    <Compile Include="MCM\Abstractions\CollectionExtensions.cs" />
+    <Compile Include="MCM\Abstractions\ExternalSettingsProviderInvalidateCacheType.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\BaseSettingsBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsBuilderFactory.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsPresetBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsPropertyBuilder.2.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsPropertyBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\ISettingsPropertyGroupBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyBoolBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyButtonBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyDropdownBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyFloatingIntegerBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyGroupToggleBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyIntegerBuilder.cs" />
+    <Compile Include="MCM\Abstractions\FluentBuilder\Models\ISettingsPropertyTextBuilder.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\GameDirectory.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\GameFile.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\ICampaignIdProvider.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\IFileSystemProvider.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\IGameEventListener.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\IPerSaveSettingsProvider.cs" />
+    <Compile Include="MCM\Abstractions\GameFeatures\PlatformDirectoryType.cs" />
+    <Compile Include="MCM\Abstractions\Global\IFluentGlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\Global\IGlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\IExternalSettingsProvider.cs" />
+    <Compile Include="MCM\Abstractions\IExternalSettingsProviderCanInvalidateCache.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionBase.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionBool.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionButton.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionDropdown.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionGroupToggle.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionText.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithActionFormat.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithCustomFormatter.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithEditableMinMax.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithFormat.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithId.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyDefinitionWithMinMax.cs" />
+    <Compile Include="MCM\Abstractions\IPropertyGroupDefinition.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerCanInvalidateCache.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerCanOverride.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerCanReset.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerHasSettingsDefinitions.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerHasSettingsPack.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerHasUnavailable.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsContainerPresets.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsFormat.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsPreset.cs" />
+    <Compile Include="MCM\Abstractions\ISettingsPropertyDefinition.cs" />
+    <Compile Include="MCM\Abstractions\MemorySettingsFormat.cs" />
+    <Compile Include="MCM\Abstractions\MemorySettingsPreset.cs" />
+    <Compile Include="MCM\Abstractions\NoneSettingsFormat.cs" />
+    <Compile Include="MCM\Abstractions\PerCampaign\IFluentPerCampaignSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\PerCampaign\IPerCampaignSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\PerSave\IFluentPerSaveSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\PerSave\IPerSaveSettingsContainer.cs" />
+    <Compile Include="MCM\Abstractions\Properties\IAttributeSettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Abstractions\Properties\IFluentSettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Abstractions\Properties\ISettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Abstractions\Properties\NoneSettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Abstractions\ServiceCollectionExtensions.cs" />
+    <Compile Include="MCM\Abstractions\SettingsDefinition.cs" />
+    <Compile Include="MCM\Abstractions\SettingSnapshot.cs" />
+    <Compile Include="MCM\Abstractions\SettingsPresetWrapper.cs" />
+    <Compile Include="MCM\Abstractions\SettingsPropertyDefinition.cs" />
+    <Compile Include="MCM\Abstractions\SettingsPropertyGroupDefinition.cs" />
+    <Compile Include="MCM\Abstractions\SettingsProviderWrapper.cs" />
+    <Compile Include="MCM\Abstractions\SettingsUtils.cs" />
+    <Compile Include="MCM\Abstractions\SettingType.cs" />
+    <Compile Include="MCM\Abstractions\UnavailableSetting.cs" />
+    <Compile Include="MCM\Abstractions\UnavailableSettingType.cs" />
+    <Compile Include="MCM\Abstractions\Utils\SerializationUtils.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\AttributePropertyDefinitionGroupToggleWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\BasePropertyDefinitionWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionBoolWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionButtonWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionDropdownWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionGroupToggleWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionTextWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithActionFormatWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithCustomFormatterWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithEditableMinMaxWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithFormatWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithIdWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyDefinitionWithMinMaxWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\PropertyGroupDefinitionWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\SettingsDefinitionWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\SettingsPropertyDefinitionWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Wrapper\SettingsPropertyGroupDefinitionWrapper.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyBaseXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyBoolXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyDropdownXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyFloatingIntegerXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyGroupXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyIntegerXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\PropertyTextXmlModel.cs" />
+    <Compile Include="MCM\Abstractions\Xml\SettingsXmlModel.cs" />
+    <Compile Include="MCM\Common\Constants.cs" />
+    <Compile Include="MCM\Common\Dropdown.cs" />
+    <Compile Include="MCM\Common\IRef.cs" />
+    <Compile Include="MCM\Common\IWrapper.cs" />
+    <Compile Include="MCM\Common\LocalizationUtils.cs" />
+    <Compile Include="MCM\Common\MCMException.cs" />
+    <Compile Include="MCM\Common\PropertyRef.cs" />
+    <Compile Include="MCM\Common\ProxyRef.cs" />
+    <Compile Include="MCM\Common\RefWrapper.cs" />
+    <Compile Include="MCM\Common\SelectedIndexWrapper.cs" />
+    <Compile Include="MCM\Common\StorageRef.2.cs" />
+    <Compile Include="MCM\Common\StorageRef.cs" />
+    <Compile Include="MCM\Implementation\AttributeSettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Implementation\BaseJsonSettingsFormat.cs" />
+    <Compile Include="MCM\Implementation\BaseSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\BaseSettingsJsonConverter.cs" />
+    <Compile Include="MCM\Implementation\DefaultSettingsProvider.cs" />
+    <Compile Include="MCM\Implementation\DropdownJsonConverter.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\DefaultSettingsBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\DefaultSettingsBuilderFactory.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\DefaultSettingsPresetBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\DefaultSettingsPropertyGroupBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\BaseDefaultSettingsPropertyBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyBoolBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyButtonBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyDropdownBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyFloatingIntegerBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyGroupToggleBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyIntegerBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentBuilder\Models\DefaultSettingsPropertyTextBuilder.cs" />
+    <Compile Include="MCM\Implementation\FluentSettingsPropertyDiscoverer.cs" />
+    <Compile Include="MCM\Implementation\Global\BaseGlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\Global\ExternalGlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\Global\FluentGlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\Global\GlobalSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\JsonSettingsFormat.cs" />
+    <Compile Include="MCM\Implementation\JsonSettingsPreset.cs" />
+    <Compile Include="MCM\Implementation\PerCampaign\FluentPerCampaignSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\PerCampaign\PerCampaignSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\PerSave\FluentPerSaveSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\PerSave\PerSaveSettingsContainer.cs" />
+    <Compile Include="MCM\Implementation\XmlSettingsFormat.cs" />
+    <Compile Include="MCM\Internal\Extensions\PlatformFileHelperPCExtended.cs" />
+    <Compile Include="MCM\Internal\Extensions\ServiceCollectionExtensions.cs" />
+    <Compile Include="MCM\Internal\GameFeatures\CampaignIdProvider.cs" />
+    <Compile Include="MCM\Internal\GameFeatures\FileSystemProvider.cs" />
+    <Compile Include="MCM\Internal\GameFeatures\PerSaveCampaignBehavior.cs" />
+    <Compile Include="MCM\Internal\MCMImplementationSubModule.cs" />
+    <Compile Include="MCM\Internal\MCMSettings.cs" />
+    <Compile Include="MCM\LightInject\AssemblyLoader.cs" />
+    <Compile Include="MCM\LightInject\AssemblyScanner.cs" />
+    <Compile Include="MCM\LightInject\CachedTypeExtractor.cs" />
+    <Compile Include="MCM\LightInject\CompositionRootAttributeExtractor.cs" />
+    <Compile Include="MCM\LightInject\CompositionRootExecutor.cs" />
+    <Compile Include="MCM\LightInject\CompositionRootTypeAttribute.cs" />
+    <Compile Include="MCM\LightInject\CompositionRootTypeExtractor.cs" />
+    <Compile Include="MCM\LightInject\ConcreteTypeExtractor.cs" />
+    <Compile Include="MCM\LightInject\ConstructionInfo.cs" />
+    <Compile Include="MCM\LightInject\ConstructionInfoProvider.cs" />
+    <Compile Include="MCM\LightInject\ConstructorDependency.cs" />
+    <Compile Include="MCM\LightInject\ConstructorDependencySelector.cs" />
+    <Compile Include="MCM\LightInject\ContainerOptions.cs" />
+    <Compile Include="MCM\LightInject\DecoratorRegistration.cs" />
+    <Compile Include="MCM\LightInject\Dependency.cs" />
+    <Compile Include="MCM\LightInject\DynamicMethod.cs" />
+    <Compile Include="MCM\LightInject\Emitter.cs" />
+    <Compile Include="MCM\LightInject\EmitterExtensions.cs" />
+    <Compile Include="MCM\LightInject\Ensure.cs" />
+    <Compile Include="MCM\LightInject\EnumerableTypeExtensions.cs" />
+    <Compile Include="MCM\LightInject\FuncHelper.cs" />
+    <Compile Include="MCM\LightInject\GenericArgumentMapper.cs" />
+    <Compile Include="MCM\LightInject\GenericMappingResult.cs" />
+    <Compile Include="MCM\LightInject\GetInstanceDelegate.cs" />
+    <Compile Include="MCM\LightInject\IAssemblyLoader.cs" />
+    <Compile Include="MCM\LightInject\IAssemblyScanner.cs" />
+    <Compile Include="MCM\LightInject\ICloneableLifeTime.cs" />
+    <Compile Include="MCM\LightInject\ICompositionRoot.cs" />
+    <Compile Include="MCM\LightInject\ICompositionRootAttributeExtractor.cs" />
+    <Compile Include="MCM\LightInject\ICompositionRootExecutor.cs" />
+    <Compile Include="MCM\LightInject\IConstructionInfoBuilder.cs" />
+    <Compile Include="MCM\LightInject\IConstructionInfoProvider.cs" />
+    <Compile Include="MCM\LightInject\IConstructorDependencySelector.cs" />
+    <Compile Include="MCM\LightInject\IConstructorSelector.cs" />
+    <Compile Include="MCM\LightInject\IEmitter.cs" />
+    <Compile Include="MCM\LightInject\IGenericArgumentMapper.cs" />
+    <Compile Include="MCM\LightInject\ILGenerator.cs" />
+    <Compile Include="MCM\LightInject\ILifetime.cs" />
+    <Compile Include="MCM\LightInject\IMethodSkeleton.cs" />
+    <Compile Include="MCM\LightInject\ImmutableHashTable.cs" />
+    <Compile Include="MCM\LightInject\ImmutableHashTableExtensions.cs" />
+    <Compile Include="MCM\LightInject\ImmutableHashTree.cs" />
+    <Compile Include="MCM\LightInject\ImmutableHashTreeExtensions.cs" />
+    <Compile Include="MCM\LightInject\ImmutableList.cs" />
+    <Compile Include="MCM\LightInject\ImmutableMapTree.cs" />
+    <Compile Include="MCM\LightInject\ImmutableMapTreeExtensions.cs" />
+    <Compile Include="MCM\LightInject\Instruction.2.cs" />
+    <Compile Include="MCM\LightInject\Instruction.cs" />
+    <Compile Include="MCM\LightInject\IPropertyDependencySelector.cs" />
+    <Compile Include="MCM\LightInject\IPropertySelector.cs" />
+    <Compile Include="MCM\LightInject\IScopeManager.cs" />
+    <Compile Include="MCM\LightInject\IScopeManagerProvider.cs" />
+    <Compile Include="MCM\LightInject\IServiceContainer.cs" />
+    <Compile Include="MCM\LightInject\IServiceFactory.cs" />
+    <Compile Include="MCM\LightInject\IServiceNameProvider.cs" />
+    <Compile Include="MCM\LightInject\IServiceRegistry.cs" />
+    <Compile Include="MCM\LightInject\ITypeConstructionInfoBuilder.cs" />
+    <Compile Include="MCM\LightInject\ITypeExtractor.cs" />
+    <Compile Include="MCM\LightInject\KeyValue.cs" />
+    <Compile Include="MCM\LightInject\LazyConcurrentDictionary.cs" />
+    <Compile Include="MCM\LightInject\LazyHelper.cs" />
+    <Compile Include="MCM\LightInject\LifeSpanAttribute.cs" />
+    <Compile Include="MCM\LightInject\LifetimeHelper.cs" />
+    <Compile Include="MCM\LightInject\LightInjectGenericServiceFactory.cs" />
+    <Compile Include="MCM\LightInject\LightInjectGenericServiceProvider.cs" />
+    <Compile Include="MCM\LightInject\LightInjectGenericServiceProviderScope.cs" />
+    <Compile Include="MCM\LightInject\LightInjectServiceContainer.cs" />
+    <Compile Include="MCM\LightInject\LocalBuilder.cs" />
+    <Compile Include="MCM\LightInject\LogEntry.cs" />
+    <Compile Include="MCM\LightInject\LogExtensions.cs" />
+    <Compile Include="MCM\LightInject\LogicalThreadStorage.cs" />
+    <Compile Include="MCM\LightInject\LogLevel.cs" />
+    <Compile Include="MCM\LightInject\MostResolvableConstructorSelector.cs" />
+    <Compile Include="MCM\LightInject\PerContainerLifetime.cs" />
+    <Compile Include="MCM\LightInject\PerLogicalCallContextScopeManager.cs" />
+    <Compile Include="MCM\LightInject\PerLogicalCallContextScopeManagerProvider.cs" />
+    <Compile Include="MCM\LightInject\PerRequestLifeTime.cs" />
+    <Compile Include="MCM\LightInject\PerScopeLifetime.cs" />
+    <Compile Include="MCM\LightInject\PerThreadScopeManager.cs" />
+    <Compile Include="MCM\LightInject\PerThreadScopeManagerProvider.cs" />
+    <Compile Include="MCM\LightInject\PropertyDependency.cs" />
+    <Compile Include="MCM\LightInject\PropertyDependencySelector.cs" />
+    <Compile Include="MCM\LightInject\PropertySelector.cs" />
+    <Compile Include="MCM\LightInject\ReflectionHelper.cs" />
+    <Compile Include="MCM\LightInject\Registration.cs" />
+    <Compile Include="MCM\LightInject\RuntimeArgumentsLoader.cs" />
+    <Compile Include="MCM\LightInject\Scope.cs" />
+    <Compile Include="MCM\LightInject\ScopeLoader.cs" />
+    <Compile Include="MCM\LightInject\ScopeManager.cs" />
+    <Compile Include="MCM\LightInject\ScopeManagerProvider.cs" />
+    <Compile Include="MCM\LightInject\ServiceContainer.cs" />
+    <Compile Include="MCM\LightInject\ServiceFactoryExtensions.cs" />
+    <Compile Include="MCM\LightInject\ServiceFactoryLoader.cs" />
+    <Compile Include="MCM\LightInject\ServiceNameProvider.cs" />
+    <Compile Include="MCM\LightInject\ServiceRegistration.cs" />
+    <Compile Include="MCM\LightInject\ServiceRegistryExtensions.cs" />
+    <Compile Include="MCM\LightInject\ServiceRequest.cs" />
+    <Compile Include="MCM\LightInject\ServiceRequestHelper.cs" />
+    <Compile Include="MCM\LightInject\ThreadSafeDictionary.cs" />
+    <Compile Include="MCM\LightInject\TypeConstructionInfoBuilder.cs" />
+    <Compile Include="MCM\LightInject\TypeHelper.cs" />
+    <Compile Include="MCM\MCMSubModule.cs" />
+    <Compile Include="MCM\SettingsProviderCampaignBehavior.cs" />
+    <Compile Include="MCM\SettingsProviderMissionBehavior.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\AllowNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DisallowNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DoesNotReturnAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\DoesNotReturnIfAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MaybeNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MaybeNullWhenAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MemberNotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\MemberNotNullWhenAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullIfNotNullAttribute.cs" />
+    <Compile Include="System\Diagnostics\CodeAnalysis\NotNullWhenAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsByRefLikeAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsExternalInit.cs" />
+    <Compile Include="System\Runtime\CompilerServices\IsReadOnlyAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\0Harmony\0Harmony.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EE13}</Project>
+      <Name>0Harmony</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\netstandard\netstandard.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EE23}</Project>
+      <Name>netstandard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Newtonsoft.Json\Newtonsoft.Json.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDD9}</Project>
+      <Name>Newtonsoft.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.CampaignSystem\TaleWorlds.CampaignSystem.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDE0}</Project>
+      <Name>TaleWorlds.CampaignSystem</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.Core\TaleWorlds.Core.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDE2}</Project>
+      <Name>TaleWorlds.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.Engine\TaleWorlds.Engine.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDEE}</Project>
+      <Name>TaleWorlds.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.Library\TaleWorlds.Library.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDF7}</Project>
+      <Name>TaleWorlds.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.Localization\TaleWorlds.Localization.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDF9}</Project>
+      <Name>TaleWorlds.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.ModuleManager\TaleWorlds.ModuleManager.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDFA}</Project>
+      <Name>TaleWorlds.ModuleManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaleWorlds.MountAndBlade\TaleWorlds.MountAndBlade.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EDFD}</Project>
+      <Name>TaleWorlds.MountAndBlade</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

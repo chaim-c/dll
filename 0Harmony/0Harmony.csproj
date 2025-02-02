@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{748945BB-5409-4F01-BB4F-A81AD7E7EE13}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>0Harmony</RootNamespace>
+    <AssemblyName>0Harmony</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Cecil">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Backports">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Backports.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Core">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>C:\GOG Games\Mount &amp; Blade II Bannerlord\Modules\Bannerlord.Harmony\bin\Win64_Shipping_Client\MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HarmonyLib\AccessCache.cs" />
+    <Compile Include="HarmonyLib\AccessTools.cs" />
+    <Compile Include="HarmonyLib\AccessToolsExtensions.cs" />
+    <Compile Include="HarmonyLib\ArgumentType.cs" />
+    <Compile Include="HarmonyLib\AttributePatch.cs" />
+    <Compile Include="HarmonyLib\ByteBuffer.cs" />
+    <Compile Include="HarmonyLib\Code.cs" />
+    <Compile Include="HarmonyLib\CodeInstruction.cs" />
+    <Compile Include="HarmonyLib\CodeInstructionExtensions.cs" />
+    <Compile Include="HarmonyLib\CodeInstructionsExtensions.cs" />
+    <Compile Include="HarmonyLib\CodeMatch.cs" />
+    <Compile Include="HarmonyLib\CodeMatcher.cs" />
+    <Compile Include="HarmonyLib\CodeTranspiler.cs" />
+    <Compile Include="HarmonyLib\CollectionExtensions.cs" />
+    <Compile Include="HarmonyLib\DelegateTypeFactory.cs" />
+    <Compile Include="HarmonyLib\Emitter.cs" />
+    <Compile Include="HarmonyLib\ExceptionBlock.cs" />
+    <Compile Include="HarmonyLib\ExceptionBlockType.cs" />
+    <Compile Include="HarmonyLib\FastAccess.cs" />
+    <Compile Include="HarmonyLib\FastInvokeHandler.cs" />
+    <Compile Include="HarmonyLib\FileLog.cs" />
+    <Compile Include="HarmonyLib\GeneralExtensions.cs" />
+    <Compile Include="HarmonyLib\GetterHandler.cs" />
+    <Compile Include="HarmonyLib\Harmony.cs" />
+    <Compile Include="HarmonyLib\HarmonyAfter.cs" />
+    <Compile Include="HarmonyLib\HarmonyArgument.cs" />
+    <Compile Include="HarmonyLib\HarmonyAttribute.cs" />
+    <Compile Include="HarmonyLib\HarmonyBefore.cs" />
+    <Compile Include="HarmonyLib\HarmonyCleanup.cs" />
+    <Compile Include="HarmonyLib\HarmonyDebug.cs" />
+    <Compile Include="HarmonyLib\HarmonyDelegate.cs" />
+    <Compile Include="HarmonyLib\HarmonyException.cs" />
+    <Compile Include="HarmonyLib\HarmonyFinalizer.cs" />
+    <Compile Include="HarmonyLib\HarmonyMethod.cs" />
+    <Compile Include="HarmonyLib\HarmonyMethodExtensions.cs" />
+    <Compile Include="HarmonyLib\HarmonyPatch.cs" />
+    <Compile Include="HarmonyLib\HarmonyPatchAll.cs" />
+    <Compile Include="HarmonyLib\HarmonyPatchCategory.cs" />
+    <Compile Include="HarmonyLib\HarmonyPatchType.cs" />
+    <Compile Include="HarmonyLib\HarmonyPostfix.cs" />
+    <Compile Include="HarmonyLib\HarmonyPrefix.cs" />
+    <Compile Include="HarmonyLib\HarmonyPrepare.cs" />
+    <Compile Include="HarmonyLib\HarmonyPriority.cs" />
+    <Compile Include="HarmonyLib\HarmonyReversePatch.cs" />
+    <Compile Include="HarmonyLib\HarmonyReversePatchType.cs" />
+    <Compile Include="HarmonyLib\HarmonySharedState.cs" />
+    <Compile Include="HarmonyLib\HarmonyTargetMethod.cs" />
+    <Compile Include="HarmonyLib\HarmonyTargetMethods.cs" />
+    <Compile Include="HarmonyLib\HarmonyTranspiler.cs" />
+    <Compile Include="HarmonyLib\ILInstruction.cs" />
+    <Compile Include="HarmonyLib\InlineSignature.cs" />
+    <Compile Include="HarmonyLib\InlineSignatureParser.cs" />
+    <Compile Include="HarmonyLib\InstantiationHandler.cs" />
+    <Compile Include="HarmonyLib\LeaveTry.cs" />
+    <Compile Include="HarmonyLib\MethodBaseExtensions.cs" />
+    <Compile Include="HarmonyLib\MethodBodyReader.cs" />
+    <Compile Include="HarmonyLib\MethodCopier.cs" />
+    <Compile Include="HarmonyLib\MethodDispatchType.cs" />
+    <Compile Include="HarmonyLib\MethodInvoker.cs" />
+    <Compile Include="HarmonyLib\MethodPatcher.cs" />
+    <Compile Include="HarmonyLib\MethodType.cs" />
+    <Compile Include="HarmonyLib\Patch.cs" />
+    <Compile Include="HarmonyLib\PatchArgumentExtensions.cs" />
+    <Compile Include="HarmonyLib\PatchClassProcessor.cs" />
+    <Compile Include="HarmonyLib\Patches.cs" />
+    <Compile Include="HarmonyLib\PatchFunctions.cs" />
+    <Compile Include="HarmonyLib\PatchInfo.cs" />
+    <Compile Include="HarmonyLib\PatchInfoSerialization.cs" />
+    <Compile Include="HarmonyLib\PatchJobs.cs" />
+    <Compile Include="HarmonyLib\PatchProcessor.cs" />
+    <Compile Include="HarmonyLib\PatchSorter.cs" />
+    <Compile Include="HarmonyLib\PatchTools.cs" />
+    <Compile Include="HarmonyLib\Priority.cs" />
+    <Compile Include="HarmonyLib\RefResult.cs" />
+    <Compile Include="HarmonyLib\ReversePatcher.cs" />
+    <Compile Include="HarmonyLib\SetterHandler.cs" />
+    <Compile Include="HarmonyLib\SymbolExtensions.cs" />
+    <Compile Include="HarmonyLib\Tools.cs" />
+    <Compile Include="HarmonyLib\Transpilers.cs" />
+    <Compile Include="HarmonyLib\Traverse.2.cs" />
+    <Compile Include="HarmonyLib\Traverse.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mscorlib\mscorlib.csproj">
+      <Project>{748945BB-5409-4F01-BB4F-A81AD7E7EE22}</Project>
+      <Name>mscorlib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
